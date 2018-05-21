@@ -791,7 +791,7 @@
             "metadata": {
               "description": "Comma-delimited email addresses where the alerts are also sent"
             }
-          },
+          }
     },
     "resources": [
         {
@@ -1306,7 +1306,7 @@
             "subnetWeb": "[concat('web-subnet-',variables('resourceprefix'))]",
             "subnetWebPrefix": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),0)))]",
             "subnetWebRange": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),0)), '.0/24')]",
-            "subnetWaf": "[concat('web-subnet-',variables('resourceprefix'))]",
+            "subnetWaf": "[concat('waf-subnet-',variables('resourceprefix'))]",
             "subnetWafPrefix": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),7)))]",
             "subnetWafRange": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),7)), '.0/24')]",
             "thumbprintSslCert": "[if(or(empty(parameters('keyVaultResourceId')), empty(parameters('sslCertThumbprint'))), 'None', parameters('sslCertThumbprint'))]",
