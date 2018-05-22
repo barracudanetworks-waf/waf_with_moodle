@@ -351,7 +351,7 @@
                     "protocol": "Tcp",
                     "port": 80,
                     "intervalInSeconds": 5,
-                    "numberOfProbes": 3,
+                    "numberOfProbes": 3
                   },
                   "name": "WAF-Health-Probe"
                 }

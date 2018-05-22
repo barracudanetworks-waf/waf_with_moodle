@@ -113,7 +113,7 @@
                           "subnet": {
                             "id": "[parameters('subnetIdWaf')]"
                           },
-                          "loadBalancerBackendAddressPools": "[take(variables('waflbBePoolArray'), variables('waflbBePoolArrayTakeCount'))]",
+                          "loadBalancerBackendAddressPools": "[take(variables('waflbBePoolArray'), variables('waflbBePoolArrayTakeCount'))]"
                         }
                       }
                     ],
