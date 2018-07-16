@@ -353,7 +353,7 @@
                     "intervalInSeconds": 5,
                     "numberOfProbes": 3
                   },
-                  "name": "WAF-Health-Probe"
+                  "name": "[parameters('moodleCommon').wafextProbe  ]"
                 }
               ]
             }
