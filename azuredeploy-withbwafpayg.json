@@ -1238,7 +1238,7 @@
             "waflbDns": "[concat('lb-',variables('resourceprefix'),'.',resourceGroup().location,'.cloudapp.azure.com')]",
             "waflbSku": "[parameters('wafloadBalancerSku')]",
             "waflbName": "[concat('lb-',variables('resourceprefix'))]",
-            "waflbPipName": "[concat('lb-pubip-',variables('resourceprefix'))]",            
+            "waflbPipName": "[concat('waflb-pubip-',variables('resourceprefix'))]",            
             "moodleAdminPass": "[concat(toUpper('xl'), substring(uniqueString(resourceGroup().id, deployment().name), 6, 7),',1*8')]",
             "moodleDbName": "moodle",
             "moodleDbPass": "[concat('9#36^', substring(uniqueString(resourceGroup().id, deployment().name), 5, 8), toUpper('ercq'))]",
