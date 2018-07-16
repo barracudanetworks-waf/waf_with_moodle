@@ -75,6 +75,7 @@
         ],
         "location": "[resourceGroup().location]",
         "name": "[parameters('moodleCommon').wafvmssName]",
+        "plan": "[parameters('moodleCommon').wafimagePlan]",
         "sku": {
             "capacity": 1,
             "name": "[parameters('moodleCommon').wafautoscaleVmSku]",

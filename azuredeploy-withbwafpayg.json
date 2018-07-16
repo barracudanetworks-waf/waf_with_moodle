@@ -1269,6 +1269,12 @@
                 "sku": "hourly",
                 "version": "latest"
               },
+            "wafimagePlan": {
+                "name": "hourly",
+                "product": "waf",
+                "publisher": "barracudanetworks"
+              },
+            
             "policyName": "[concat('policy-',variables('resourceprefix'))]",
             "postgresVersion": "[parameters('postgresVersion')]",
             "redisCacheName": "[concat('redis-',variables('resourceprefix'))]",
