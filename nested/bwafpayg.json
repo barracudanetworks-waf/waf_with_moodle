@@ -25,6 +25,7 @@
         "waflbBePoolArrayTakeCount": "[if(equals(parameters('moodleCommon').httpsTermination, 'AppGw'), 0, 1)]",
         "wafextBeID": "[concat(variables('wafextLbID'),'/backendAddressPools/',parameters('moodleCommon').wafextBeName)]",
         "wafextLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('moodleCommon').waflbName)]",
+        "wafextProbeID": "[concat(variables('wafextLbID'),'/probes/',parameters('moodleCommon').wafextProbe  )]",
         "wafClusteringMode": "[if(parameters('moodleCommon').wafazureOverprovisioning, 'ALL_PEER_METHOD', 'MASTER_SLAVE_METHOD')]",
         "wafuserData": {
             "vmss_instance": true,
