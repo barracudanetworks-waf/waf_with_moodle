@@ -292,7 +292,7 @@
             "properties": {
               "frontendIPConfigurations": [
                 {
-                  "name": "LoadBalancerFrontEnd",
+                  "name": "[parameters('moodleCommon').wafextFeName ]",
                   "properties": {
                     "publicIPAddress": {
                       "id": "[variables('waflbPipID')]"
