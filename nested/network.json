@@ -307,7 +307,7 @@
               ],
               "loadBalancingRules": [
                 {
-                    "name": "Http",
+                    "name": "wafHttp",
                     "properties": {
                         "backendAddressPool": {
                             "id": "[variables('wafextBeID')]"
@@ -326,7 +326,7 @@
                     }
                 },
                 {
-                    "name": "Https",
+                    "name": "wafHttps",
                     "properties": {
                         "backendAddressPool": {
                             "id": "[variables('wafextBeID')]"
