@@ -16,14 +16,6 @@ typical scenarios follow this.
 
 [![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy.json)
 
-## Fully configurable deployment with Barracuda WAF
-
-This deployment will add the Barracuda Web Application Firewall to the moodle infrastructure.
-The following button will allow you to specify various configurations for your Moodle cluster
-deployment.
-
-[![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faravindan-barracuda%2Fwaf_with_moodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
-
 ## Minimal deployment
 
 Try the following button if you'd like to deploy our templates with minimal resources.
@@ -75,6 +67,14 @@ in the calculator is the minimum cost of this deployment. The actual cost will b
 autoscaled VMs, backups, and network cost.
 
 [![Deploy to Azure Maximally](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json)
+
+## Fully configurable deployment with Barracuda WAF
+
+This deployment will add the Barracuda Web Application Firewall to the moodle infrastructure.
+The following button will allow you to specify various configurations for your Moodle cluster
+deployment.
+
+[![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faravindan-barracuda%2Fwaf_with_moodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
 
 ## Stack Architecture
 
