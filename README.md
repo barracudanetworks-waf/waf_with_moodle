@@ -16,12 +16,11 @@ typical scenarios follow this.
 
 [![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy.json)
 
-## Fully configurable deployment with WAF
+## Fully configurable deployment with Barracuda WAF
 
+This deployment will add the Barracuda Web Application Firewall to the moodle infrastructure.
 The following button will allow you to specify various configurations for your Moodle cluster
-deployment. The number of configuration options might be overwhelming, and we'll add more
-detailed sizing guidelines in the future. Some pre-defined/restricted deployment options for
-typical scenarios follow this.
+deployment.
 
 [![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faravindan-barracuda%2Fwaf_with_moodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
 
