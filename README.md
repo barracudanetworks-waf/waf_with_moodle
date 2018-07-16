@@ -23,7 +23,8 @@ deployment. The number of configuration options might be overwhelming, and we'll
 detailed sizing guidelines in the future. Some pre-defined/restricted deployment options for
 typical scenarios follow this.
 
-[![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
+[![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faravindan-barracuda%2Fwaf_with_moodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
+
 ## Minimal deployment
 
 Try the following button if you'd like to deploy our templates with minimal resources.
