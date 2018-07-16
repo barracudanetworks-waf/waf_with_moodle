@@ -68,7 +68,7 @@ autoscaled VMs, backups, and network cost.
 
 [![Deploy to Azure Maximally](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-maximal.json)
 
-## Fully configurable deployment with Barracuda WAF
+## Fully configurable deployment with Barracuda WAF (Pay-As-You-Go License)
 
 This deployment will add the Barracuda Web Application Firewall to the moodle infrastructure.
 The following button will allow you to specify various configurations for your Moodle cluster
