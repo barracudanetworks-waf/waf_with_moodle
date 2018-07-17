@@ -481,7 +481,7 @@
         "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName, uniqueString(resourceGroup().location)), 0, 9))]",
         "wafnatPoolName": "[concat(variables('wafnamingInfix'), 'natpool')]",
         "wafnatPoolNameHttps": "[concat(variables('wafnamingInfix'), 'natpoolHttps')]",
-        "waffrontEndIPConfigID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
+        "waffrontEndIPConfigID": "[concat(parameters('moodleCommon').wafextFeName,'/frontendIPConfigurations/loadBalancerFrontEnd')]",
         "extLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('moodleCommon').lbName)]",
         "wafextLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('moodleCommon').waflbName)]",
         "extProbeID": "[concat(variables('extLbID'),'/probes/',parameters('moodleCommon').extProbe)]",
