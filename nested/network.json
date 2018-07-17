@@ -413,7 +413,7 @@
               ],
               "inboundNatPools": [
                 {
-                  "name": "wafnatpoolhttp",
+                  "name": "[variables('wafnatPoolName')]",
                   "properties": {
                     "frontendIPConfiguration": {
                       "id": "[variables('waffrontEndIPConfigID')]"
@@ -425,7 +425,7 @@
                   }
                 },
                 {
-                  "name": "wafnatpoolhttps",
+                  "name": "[variables('wafnatPoolNameHttps')]",
                   "properties": {
                     "frontendIPConfiguration": {
                       "id": "[variables('waffrontEndIPConfigID')]"
@@ -478,6 +478,9 @@
         "extFeID": "[concat(variables('extLbID'),'/frontendIPConfigurations/',parameters('moodleCommon').extFeName)]",
         "wafextBeID": "[concat(variables('wafextLbID'),'/backendAddressPools/',parameters('moodleCommon').wafextBeName)]",
         "wafextFeID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/',parameters('moodleCommon').wafextFeName)]",
+        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName), uniqueString(resourceGroup().location)), 0, 9)]",
+        "wafnatPoolName": "[concat(variables('wafnamingInfix'), 'natpool')]",
+        "wafnatPoolNameHttps": "[concat(variables('wafnamingInfix'), 'natpoolHttps')]",
         "waffrontEndIPConfigID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
         "extLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('moodleCommon').lbName)]",
         "wafextLbID": "[resourceId('Microsoft.Network/loadBalancers',parameters('moodleCommon').waflbName)]",

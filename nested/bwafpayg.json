@@ -22,6 +22,9 @@
                 "id": "[variables('wafextBeID')]"
             }
         ],
+        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName), uniqueString(resourceGroup().location)), 0, 9)]",
+        "wafnatPoolName": "[concat(variables('wafnamingInfix'), 'natpool')]",
+        "wafnatPoolNameHttps": "[concat(variables('wafnamingInfix'), 'natpoolHttps')]",
         "waflbBePoolArrayTakeCount": "[if(equals(parameters('moodleCommon').httpsTermination, 'AppGw'), 0, 1)]",
         "wafextBeID": "[concat(variables('wafextLbID'),'/backendAddressPools/',parameters('moodleCommon').wafextBeName)]",
         "wafextFeID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/',parameters('moodleCommon').wafextFeName)]",
@@ -116,14 +119,21 @@
                           "subnet": {
                             "id": "[parameters('subnetIdWaf')]"
                           },
-                          "loadBalancerBackendAddressPools": "[take(variables('waflbBePoolArray'), variables('waflbBePoolArrayTakeCount'))]"
+                          "loadBalancerBackendAddressPools": "[take(variables('waflbBePoolArray'), variables('waflbBePoolArrayTakeCount'))]",
+                          "loadBalancerInboundNatPools": [
+                            {
+                              "id": "[concat(variables('wafextLbID'), '/inboundNatPools/', variables('wafnatPoolName'))]"
+                            },
+                            {
+                              "id": "[concat(variables('wafextLbID'), '/inboundNatPools/', variables('wafnatPoolNameHttps'))]"
+                            }
+                          ]
                         }
                       }
-                    ],
-                    "primary": true  
-                }
+                    ]                }
                 }
               ]
+
             }
           }
         }
