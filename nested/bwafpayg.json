@@ -22,7 +22,7 @@
                 "id": "[variables('wafextBeID')]"
             }
         ],
-        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName), uniqueString(resourceGroup().location)), 0, 9)]",
+        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName, uniqueString(resourceGroup().location)), 0, 9))]",
         "wafnatPoolName": "[concat(variables('wafnamingInfix'), 'natpool')]",
         "wafnatPoolNameHttps": "[concat(variables('wafnamingInfix'), 'natpoolHttps')]",
         "waflbBePoolArrayTakeCount": "[if(equals(parameters('moodleCommon').httpsTermination, 'AppGw'), 0, 1)]",

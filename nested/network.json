@@ -478,7 +478,7 @@
         "extFeID": "[concat(variables('extLbID'),'/frontendIPConfigurations/',parameters('moodleCommon').extFeName)]",
         "wafextBeID": "[concat(variables('wafextLbID'),'/backendAddressPools/',parameters('moodleCommon').wafextBeName)]",
         "wafextFeID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/',parameters('moodleCommon').wafextFeName)]",
-        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName), uniqueString(resourceGroup().location)), 0, 9)]",
+        "wafnamingInfix": "[toLower(substring(concat(parameters('moodleCommon').wafvmssName, uniqueString(resourceGroup().location)), 0, 9))]",
         "wafnatPoolName": "[concat(variables('wafnamingInfix'), 'natpool')]",
         "wafnatPoolNameHttps": "[concat(variables('wafnamingInfix'), 'natpoolHttps')]",
         "waffrontEndIPConfigID": "[concat(variables('wafextLbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
