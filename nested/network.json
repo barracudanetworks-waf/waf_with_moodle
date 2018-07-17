@@ -168,8 +168,8 @@
         },
         {
             "type": "Microsoft.Network/networkSecurityGroups",
-            "condition": "[parameters('moodleCommon').vnetName]",
-            "apiVersion": "2017-03-01",
+            "condition": "[variables('vnetName')]",
+            "apiVersion": "2017-10-01",
             "name": "[concat(parameters('moodleCommon').waflbSku,'NSG')]",
             "location": "[resourceGroup().location]",
             "tags": {
