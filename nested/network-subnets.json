@@ -106,7 +106,10 @@
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), parameters('moodleCommon').subnetAppGw)]"
             ],
             "properties": {
-                "addressPrefix": "[parameters('moodleCommon').subnetWafRange]"
+                "addressPrefix": "[parameters('moodleCommon').subnetWafRange]",
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('moodleCommon').waflbSku,'NSG'))]"
+                  }
             }
         }
     ],
