@@ -5,6 +5,19 @@
                 "sshPublicKey":                { "value": "GEN-SSH-PUB-KEY" },
                 "dbServerType":                { "value": "mssql" },
                 "fileServerDiskCount":         { "value": 2 },
-                "fileServerDiskSize":          { "value": 32 }
+                "fileServerDiskSize":          { "value": 32 },
+                "wafpasswd": {"value": "waf-password"},
+                "azureAuthenticationMethod": {"value": "AZURE_SERVICE_PRINCIPAL"},
+                "azureClientId": {"value": "change-me"},
+                "azureTenantId": {"value": "change-me"},
+                "azureSecretKey": {"value": "change-me"},
+                "wafBootstrapMethod": {"value": "BACKUP_BASED_BOOTSTRAP"},
+                "azureStorageAccountName": {"value": "change-me"},
+                "azureStorageAccountKey": {"value": "change-me"},
+                "azureStorageBlobName": {"value": "change-me"},
+                "azureBootstrapBackupFilename": {"value": "change-me"},
+                "wafOmsPrimaryKey": {"value": "change-me"},
+                "wafOmsWorkspaceId": {"value": "change-me"},
+                "wafazureOverprovisioning" : {"value": false}
         }
 }

@@ -80,7 +80,7 @@
         "name": "[parameters('moodleCommon').wafvmssName]",
         "plan": "[parameters('moodleCommon').wafimagePlan]",
         "sku": {
-            "capacity": 1,
+            "capacity": 2,
             "name": "[parameters('moodleCommon').wafautoscaleVmSku]",
             "tier": "Standard"
         },

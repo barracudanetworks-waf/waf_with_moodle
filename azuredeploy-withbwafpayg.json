@@ -766,7 +766,7 @@
           },
           "wafServers": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "serverip",
             "metadata": {
               "description": "Comma separated list of server:port with identifier being IP or hostname. Example 10.0.1.70:80,10.0.1.71:80,www.abc.com:80,www.xyz:80"
             }
