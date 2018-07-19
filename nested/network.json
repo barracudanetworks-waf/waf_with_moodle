@@ -404,7 +404,7 @@
                 {
                   "properties": {
                     "protocol": "Tcp",
-                    "port": 8000,
+                    "port": 80,
                     "intervalInSeconds": 5,
                     "numberOfProbes": 3
                   },
