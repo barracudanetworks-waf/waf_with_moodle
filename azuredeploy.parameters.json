@@ -7,7 +7,15 @@
                 "fileServerDiskCount":         { "value": 2 },
                 "fileServerDiskSize":          { "value": 32 },
                 "wafpasswd": {"value": "@Testing123456"},
+                "wafazureAuthenticationMethod": {"value": "AZURE_SERVICE_PRINCIPAL"},
+                "wafazureClientId": {"value": "9c92e59e-e9d1-48c8-a963-e7c0ce56977c"},
+                "wafazureTenantId": {"value": "4c2cee7c-97ca-4f42-88ea-6acf44978369"},
+                "wafazureSecretKey": {"value": "rtNK_FbfJguw2zlpBADXyw=="},
                 "wafazureOverprovisioning" : {"value": false},
+                "wafBootstrapMethod" : {"value": "NO_BOOTSTRAPING"},
+                "wafNotifyEmail" : {"value": "admin@admin.local"},
+                "wafOmsPrimaryKey" : {"value": "cyr0nDcRGsO7USjc1esSt6+foC2uUsw+Q4mZRm+xBnUoq+w0GyFn3vTA9UGd4XM9cAAi2Nf96UeEHPE2YJN/Gg=="},
+                "wafOmsWorkspaceId" : {"value": "37f7c1b0-4300-42d2-8bc0-589e0fd94e94"},
                 "siteURL": {"value": "moodle.selahcloud.in"}
         }
 }
