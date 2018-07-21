@@ -91,7 +91,11 @@ WAFPASSWD=<waf password> #for example @Testing123456
     Finally, use the following command to deploy the Barracuda WAF with the Moodle fully configurable setup.
 
 ``` bash 
-    az group deployment create --name $MOODLE_DEPLOYMENT_NAME --resource-group $MOODLE_RG_NAME --template-file $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy-withbwafpayg.json --parameters $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
+az group deployment create --name $MOODLE_DEPLOYMENT_NAME \
+--resource-group $MOODLE_RG_NAME --template-file \
+$MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy-withbwafpayg.json \
+--parameters $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
+
 ```
 
 
