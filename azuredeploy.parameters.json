@@ -6,7 +6,7 @@
                 "dbServerType":                { "value": "mssql" },
                 "fileServerDiskCount":         { "value": 2 },
                 "fileServerDiskSize":          { "value": 32 },
-                "wafpasswd": {"value": "@Testing123456"},
+                "wafpasswd": {"value": "WAF-PASSWORD"},
                 "wafazureAuthenticationMethod": {"value": "AZURE_SERVICE_PRINCIPAL"},
                 "wafazureClientId": {"value": "CLIENT-ID" },
                 "wafazureTenantId": {"value": "TENANT-ID" },
@@ -14,8 +14,8 @@
                 "wafazureOverprovisioning" : {"value": false},
                 "wafBootstrapMethod" : {"value": "NO_BOOTSTRAPING"},
                 "wafNotifyEmail" : {"value": "admin@admin.local"},
-                "wafOmsPrimaryKey" : {"value": "cyr0nDcRGsO7USjc1esSt6+foC2uUsw+Q4mZRm+xBnUoq+w0GyFn3vTA9UGd4XM9cAAi2Nf96UeEHPE2YJN/Gg=="},
-                "wafOmsWorkspaceId" : {"value": "37f7c1b0-4300-42d2-8bc0-589e0fd94e94"},
+                "wafOmsPrimaryKey" : {"value": "WAF-OMS-PRIMARY-KEY"},
+                "wafOmsWorkspaceId" : {"value": "WAF-OMS-WORKSPACE-ID"},
                 "siteURL": {"value": "moodle.selahcloud.in"}
         }
 }
