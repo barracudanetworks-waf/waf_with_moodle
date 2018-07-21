@@ -2,6 +2,16 @@
 
 The instructions will enable you to deploy the Barracuda WAF in a scale set along with the fully configurable moodle deployment
 
+## Fully configurable deployment with Barracuda WAF (Pay-As-You-Go License)
+
+This deployment will add the Barracuda Web Application Firewall to the moodle infrastructure.
+The following button will allow you to specify various configurations for your Moodle cluster
+deployment.
+
+[![Deploy to Azure Fully Configurable](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faravindan-barracuda%2Fwaf_with_moodle%2Fmaster%2Fazuredeploy-withbwafpayg.json)
+
+# CLI based deployment
+
 ## Prerequisites
 
 First we need to ensure our environment variables are correctly configured.
