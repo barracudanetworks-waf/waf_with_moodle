@@ -7,11 +7,13 @@ The instructions will enable you to deploy the Barracuda WAF in a scale set alon
 First we need to ensure our environment variables are correctly configured.
 1. We use azure-credentials to create a the SPN credentials that will be used in the WAF for azure configuration. Set up the azure account username and password variables:
 
+``` bash 
 AZUREUSERNAME=<azure user account>
-
 AZUREPASSWD=<azure account password>
+WAFPASSWD=<waf password> #for example @Testing123456
+```
 
-2. The following snippet of bash commands will help to set up the environment variables to the point where you can execute "az group create"
+2. The following snippet of bash commands will help to set up the environment variables to the point where you can execute ```bash az group create```
 
 ``` bash
 {
@@ -61,6 +63,7 @@ AZUREPASSWD=<azure account password>
     echo "client secret is $CLIENT_SECRET"
     echo "Generated env variables"
     echo "Now creating the new parameters json file..." && sleep 2
+    sed -i "s|WAF-PASSWORD|$WAFPASSWD|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
     sed -i "s|\"CLIENT-ID\"|$CLIENT_ID|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
     sed -i "s|\"TENANT-ID\"|$TENANT_ID|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
     sed -i "s|\"CLIENT-SECRET\"|$CLIENT_SECRET|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
