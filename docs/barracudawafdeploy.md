@@ -51,7 +51,7 @@ WAFPASSWD=<waf password> #for example @Testing123456
     Note: We use a gem called ```azure-credentials``` to create a the SPN credentials that will be used in the WAF for azure configuration. 
 
 ```bash
-
+{
     if hash jq 2>/dev/null; then echo "jq is already installed";else sudo apt-get install -y jq;fi
     if hash jq 2>/dev/null; then echo "jq is already installed";else sudo apt-get install -y jq;fi
     if hash azure-credentials 2>/dev/null;then echo "azure-credentials gem is already installed";else gem install azure-credentials;fi
@@ -71,10 +71,12 @@ WAFPASSWD=<waf password> #for example @Testing123456
     CLIENT_SECRET=`cat $MOODLE_AZURE_WORKSPACE/arm_template/scripts/azure.json | jq '.client_secret'`
     echo "client secret is $CLIENT_SECRET"
     echo "Generated env variables"
+}
 ```
 3. Generating the Parameters JSON file.
 
 ```bash
+{
     echo "Now creating the new parameters json file..." && sleep 2
     sed -i "s|WAF-PASSWORD|$WAFPASSWD|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
     sed -i "s|\"CLIENT-ID\"|$CLIENT_ID|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
