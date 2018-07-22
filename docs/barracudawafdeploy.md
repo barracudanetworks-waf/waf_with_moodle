@@ -24,9 +24,11 @@ WAFPASSWD=<waf password> #for example @Testing123456
 
 ## Deployment Steps
 
-1. The following snippet of bash commands will help to set up the environment variables to the point where you      can execute ```az group create```
+The following snippet of bash commands will help to set up the environment variables to the point where you      can execute ```az group create```
 
-``` bash
+1. Moodle specific variables
+
+```
 {
     if [ -z "$MOODLE_RG_NAME" ]; then MOODLE_RG_NAME=moodle_$(date +%Y-%m-%d-%H); fi
     echo "----> Resource Group for deployment: $MOODLE_RG_NAME"
@@ -60,7 +62,7 @@ WAFPASSWD=<waf password> #for example @Testing123456
 
     Note: We use a gem called ```azure-credentials``` to create a the SPN credentials that will be used in the WAF for azure configuration. 
 
-```bash
+```
 {
     if hash jq 2>/dev/null; then echo "jq is already installed";else sudo apt-get install -y jq;fi
     if hash jq 2>/dev/null; then echo "jq is already installed";else sudo apt-get install -y jq;fi
@@ -85,7 +87,7 @@ WAFPASSWD=<waf password> #for example @Testing123456
 ```
 3. Generating the Parameters JSON file.
 
-```bash
+```
 {
     echo "Now creating the new parameters json file..." && sleep 2
     sed -i "s|WAF-PASSWORD|$WAFPASSWD|g" $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy.parameters.json > $MOODLE_AZURE_WORKSPACE/$MOODLE_RG_NAME/azuredeploy.parameters.json
@@ -100,7 +102,7 @@ WAFPASSWD=<waf password> #for example @Testing123456
 
     Finally, use the following command to deploy the Barracuda WAF with the Moodle fully configurable setup.
 
-``` bash 
+```
 az group deployment create --name $MOODLE_DEPLOYMENT_NAME \
 --resource-group $MOODLE_RG_NAME --template-file \
 $MOODLE_AZURE_WORKSPACE/arm_template/azuredeploy-withbwafpayg.json \
