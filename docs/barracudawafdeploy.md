@@ -60,7 +60,7 @@ The following snippet of bash commands will help to set up the environment varia
 ```
 2. Creating the Azure Service Principal credentials
 
-    Note: We use a gem called ```azure-credentials``` to create a the SPN credentials that will be used in the WAF for azure configuration. 
+    Note: We use a gem called ```azure-credentials``` to create the Azure SPN credentials that will be used in the WAF for azure configuration. 
 
 ```
 {
